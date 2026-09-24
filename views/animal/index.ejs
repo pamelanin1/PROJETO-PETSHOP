@@ -1,0 +1,38 @@
+<div class="container py-4">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>Animais cadastrados</h1>
+    <a href="/animais/novo" class="btn btn-primary">+ Cadastrar animal</a>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered align-middle">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Raça</th>
+          <th>Porte</th>
+          <th>Espécie</th>
+          <th>Sexo</th>
+          <th>Idade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if (!animais || animais.length === 0) { %>
+          <tr><td colspan="7" class="text-center">Nenhum animal cadastrado.</td></tr>
+        <% } %>
+        <% (animais || []).forEach(animal => { %>
+          <tr>
+            <td><%= animal.id %></td>
+            <td><%= animal.nome %></td>
+            <td><%= animal.raca %></td>
+            <td><%= animal.porte %></td>
+            <td><%= animal.especie %></td>
+            <td><%= animal.sexo %></td>
+            <td><%= animal.idade %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</div>

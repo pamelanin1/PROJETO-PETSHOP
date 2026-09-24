@@ -1,0 +1,13 @@
+<div class="container py-4" style="max-width: 700px;">
+  <h1 class="mb-4">Cadastrar animal</h1>
+  <form action="/animais" method="post">
+    <div class="mb-3"><label class="form-label">Nome</label><input class="form-control" name="nome" required></div>
+    <div class="mb-3"><label class="form-label">Raça</label><input class="form-control" name="raca" required></div>
+    <div class="mb-3"><label class="form-label">Porte</label><select class="form-select" name="porte" required><option value="">Selecione</option><option>Pequeno</option><option>Médio</option><option>Grande</option></select></div>
+    <div class="mb-3"><label class="form-label">Espécie</label><input class="form-control" name="especie" placeholder="Ex.: Cachorro, Gato" required></div>
+    <div class="mb-3"><label class="form-label">Sexo</label><select class="form-select" name="sexo" required><option value="">Selecione</option><option>Macho</option><option>Fêmea</option></select></div>
+    <div class="mb-3"><label class="form-label">Idade</label><input class="form-control" type="number" min="0" name="idade" required></div>
+    <button class="btn btn-success" type="submit">Salvar</button>
+    <a href="/animais" class="btn btn-secondary">Cancelar</a>
+  </form>
+</div>
