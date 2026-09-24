@@ -4,5 +4,6 @@ cadastrar e listar animais.
 ## Funcionalidades
 Campos: nome, raça, porte, espécie, sexo e idade.
 ## Alunas:
-Pamela 
-Milka 
+- Pamela
+
+- Milka
