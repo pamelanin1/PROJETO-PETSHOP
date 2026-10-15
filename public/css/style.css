@@ -1,0 +1,4 @@
+body { background-color: var(--bs-body-bg); }
+main.container { padding-top: 1rem; padding-bottom: 3rem; }
+.table td, .table th { vertical-align: middle; }
+.card { border-radius: 1rem; }

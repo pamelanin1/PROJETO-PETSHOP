@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= locals.titulo || 'Pet Shop' %> | Sistema Pet Shop</title>
+  <script src="/js/color-modes.js"></script>
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand fw-semibold" href="/">Pet Shop</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Mostrar menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="/">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="/clientes">Clientes</a></li>
+            <li class="nav-item"><a class="nav-link" href="/animais">Animais</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container flex-grow-1"><%- body %></main>
+  <footer class="border-top bg-body-tertiary py-3 mt-auto">
+    <div class="container text-center text-body-secondary small">Pet Shop | Programação Web II</div>
+  </footer>
+  <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

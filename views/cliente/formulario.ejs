@@ -1,0 +1,25 @@
+<div class="py-5" style="max-width:720px">
+  <h1 class="h2 mb-2">Cadastrar cliente</h1>
+  <p class="text-body-secondary mb-4">Depois do cadastro, você poderá selecionar este cliente como dono de um animal.</p>
+  <% if (erro) { %><div class="alert alert-danger" role="alert"><%= erro %></div><% } %>
+  <form method="post" action="/clientes/novo">
+    <div class="mb-3">
+      <label for="nome" class="form-label">Nome</label>
+      <input id="nome" name="nome" class="form-control" maxlength="100" required value="<%= cliente.nome || '' %>">
+    </div>
+    <div class="mb-3">
+      <label for="telefone" class="form-label">Telefone</label>
+      <input id="telefone" name="telefone" class="form-control" maxlength="20" value="<%= cliente.telefone || '' %>">
+    </div>
+    <div class="mb-3">
+      <label for="cpf" class="form-label">CPF</label>
+      <input id="cpf" name="cpf" class="form-control" maxlength="14" required placeholder="000.000.000-00" value="<%= cliente.cpf || '' %>">
+    </div>
+    <div class="mb-4">
+      <label for="endereco" class="form-label">Endereço</label>
+      <input id="endereco" name="endereco" class="form-control" maxlength="255" value="<%= cliente.endereco || '' %>">
+    </div>
+    <button type="submit" class="btn btn-success">Salvar cliente</button>
+    <a href="/clientes" class="btn btn-outline-secondary">Cancelar</a>
+  </form>
+</div>

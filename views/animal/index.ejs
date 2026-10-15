@@ -1,0 +1,33 @@
+<div class="d-flex flex-wrap gap-3 justify-content-between align-items-center mt-5 mb-4">
+  <div><h1 class="h2 mb-1">Animais cadastrados</h1>
+  <p class="text-body-secondary mb-0">A coluna Dono mostra o cliente vinculado ao animal.</p></div>
+  <a href="/animais/novo" class="btn btn-primary">+ Cadastrar animal</a>
+</div>
+<div class="table-responsive">
+  <table class="table table-striped table-hover align-middle">
+    <thead><tr><th>ID</th><th>Nome</th><th>Raça</th><th>Porte</th><th>Espécie</th><th>Sexo</th><th>Idade</th><th>Dono</th></tr></thead>
+    <tbody>
+      <% if (!animais.length) { %>
+        <tr><td colspan="8" class="text-center py-4">Nenhum animal cadastrado.</td></tr>
+      <% } %>
+      <% animais.forEach(animal => { %>
+        <tr>
+          <td><%= animal.id %></td>
+          <td><%= animal.nome %></td>
+          <td><%= animal.raca %></td>
+          <td><%= animal.porte %></td>
+          <td><%= animal.especie %></td>
+          <td><%= animal.sexo %></td>
+          <td><%= animal.idade %></td>
+          <td>
+            <% if (animal.cliente) { %>
+              <strong><%= animal.cliente.nome %></strong>
+            <% } else { %>
+              <span class="text-body-secondary">Sem dono vinculado</span>
+            <% } %>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>
